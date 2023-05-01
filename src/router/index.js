@@ -1,24 +1,28 @@
 //src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import VistaUnirse from '../views/VistaUnirse.vue'
+import VistaEsperar from '../views/VistaEsperar.vue'
+import VistaJugar from '../views/VistaJugar.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'main',
+      component: VistaUnirse
     },
     {
-      path: '/page-one',
-      name: 'pageone',
-      component: () => import('../components/PageOne.vue')
+      path: '/wait',
+      name: 'wait',
+      component: VistaEsperar
     },
     {
-      path: '/page-two',
-      name: 'pagetwo',
-      component: () => import('../components/PageTwo.vue')
-    },
+      path: '/play',
+      name: 'play',
+      component: VistaJugar
+    }
   ]
 })
+
 export default router
