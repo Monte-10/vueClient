@@ -31,7 +31,7 @@
                   type="submit"
                   class="btn btn-outline-primary w-100 mt-4"
                 >
-                  Join
+                  Unirse
                 </button>
               </form>
               <div class="alert alert-danger mt-4" role="alert" v-if="error">
