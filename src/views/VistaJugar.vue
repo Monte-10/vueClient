@@ -136,7 +136,7 @@ export default {
       if (process.env.NODE_ENV == "development") {
         url = "http://localhost:8000/api/guesses/";
       } else {
-        url = "https://clientkahoot.onrender.com/api/guesses/";
+        url = "https://kahootclone-6esl.onrender.com/api/guesses/";
       }
       axios
         .post(url, {
