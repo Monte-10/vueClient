@@ -124,7 +124,7 @@ export default {
       const url =
         process.env.NODE_ENV === "development"
           ? "http://localhost:8000/api/participants/"
-          : "https://kahootclone-6esl.onrender.com/";
+          : "https://kahootclone-6esl.onrender.com/api/participants/";
       axios
         .post(url, {
           alias: this.alias,
