@@ -35,17 +35,17 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  /* fallback for old browsers */
+
   background: #667eea;
 
-  /* Chrome 10-25, Safari 5.1-6 */
+
   background: -webkit-linear-gradient(
     to right,
     rgba(102, 126, 234, 1),
     rgba(118, 75, 162, 1)
   );
 
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   background: linear-gradient(
     to right,
     rgba(102, 126, 234, 1),
@@ -120,7 +120,7 @@
 </style>
 
 <script>
-/* global process */
+
 import axios from "axios";
 export default {
   data() {

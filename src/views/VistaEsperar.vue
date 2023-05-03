@@ -73,7 +73,7 @@ export default {
     }, 1000);
     const transitionTime = 5000;
 
-    // Define los colores de inicio y fin que quieres para la transición
+    // Cambia los colores
     const colors = [
       [66, 72, 116], // azul oscuro
       [112, 140, 162], // gris azulado
@@ -87,15 +87,15 @@ export default {
 
     let currentColorIndex = 0;
 
-    // Obtiene el elemento body de la página
+    // body de pagina
     const body = document.getElementsByTagName("body")[0];
 
-    // Define la función que se llamará para hacer la transición de color
+    // Hace la transición
     function transitionColor(currentTime) {
       // Calcula el porcentaje de tiempo transcurrido
       const percentage = currentTime / transitionTime;
 
-      // Interpola los valores RGB de inicio y fin basados en el porcentaje de tiempo transcurrido
+      // Cambia el rgb
       const startColor = colors[currentColorIndex];
       const endColor = colors[(currentColorIndex + 1) % colors.length];
       const interpolatedColor = startColor.map((value, index) => {
@@ -103,23 +103,23 @@ export default {
         return Math.round(value + delta * percentage);
       });
 
-      // Asigna el nuevo color de fondo a la página
+      // Cambia el fondo
       body.style.backgroundColor = `rgb(${interpolatedColor[0]}, ${interpolatedColor[1]}, ${interpolatedColor[2]})`;
 
-      // Si aún no se ha alcanzado el tiempo de transición completo, sigue haciendo la transición
+      // Sigue la transición si no se ha completado
       if (currentTime < transitionTime) {
         requestAnimationFrame(() => {
-          transitionColor(currentTime + 10); // llama a la función de transición de nuevo en el siguiente cuadro de animación
+          transitionColor(currentTime + 10); // vuelve a llamar a la funcion
         });
       } else {
-        // Si se completó la transición, avanza al siguiente color
+        // cambia de color
         currentColorIndex = (currentColorIndex + 1) % colors.length;
-        // Inicia la siguiente transición de color
+        // siguiente transición
         transitionColor(0);
       }
     }
 
-    // Inicia la transición de color al cargar la página
+    // Inicia todo
     transitionColor(0);
   },
   beforeUnmount() {
