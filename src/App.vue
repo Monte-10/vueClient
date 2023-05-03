@@ -1,12 +1,9 @@
 <script setup>
+import { RouterView } from "vue-router";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 </script>
 
 <template>
-  <RouterLink to="/">Unirse</RouterLink>
-  <RouterLink to="/wait">Esperar</RouterLink>
-  <RouterLink to="/play">Jugar</RouterLink>
   <RouterView />
 </template>
-
-<style scoped>
-</style>
