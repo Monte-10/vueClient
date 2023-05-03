@@ -15,7 +15,7 @@
                     class="form-control"
                     v-model="alias"
                     id="alias"
-                    placeholder="Enter your alias"
+                    placeholder="Introduce tu alias"
                   />
                 </div>
                 <div class="form-group">
@@ -24,7 +24,7 @@
                     class="form-control"
                     v-model="gameID"
                     id="gameId"
-                    placeholder="Enter game ID"
+                    placeholder="Introduce el ID de la partida"
                   />
                 </div>
                 <button
