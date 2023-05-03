@@ -55,7 +55,7 @@ export default {
         url = "http://localhost:8000/api/games/" + this.gameID + "/";
       } else {
         url =
-          "https://clientkahoot.onrender.com/api/games/" + this.gameID + "/";
+          "https://kahootclone-6esl.onrender.com/api/games/" + this.gameID + "/";
       }
       axios
         .get(url)
